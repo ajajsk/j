@@ -1,36 +1,31 @@
-console.log('Starting...')
-let { spawn } = require('child_process')
-let path = require('path')
-const CFonts  = require('cfonts')
-CFonts.say('TERMUX WHATSAPP BOT', {
-  font: 'chrome',
-  align: 'center',
-  gradient: ['red', 'magenta']
-})
-CFonts.say('\'wabot-aq\' By @Nurutomo', {
-  font: 'console',
-  align: 'center',
-  gradient: ['red', 'magenta']
-})
+break
+				case 'setprefix':
+				if (isBanned) return reply(mess.only.benned)    
+				if (!isUser) return reply(mess.only.userB)
+				if (!isPublic) return reply(mess.only.public)
+					if (args.length < 1) return
+					if (!isPremium) return reply(mess.only.premium)
+					if (!isOwner) return reply(mess.only.ownerB)
+					prefix = args[0]
+					reply(`Prefix berhasil di ubah menjadi :「* ${prefix} *」`)
+					break
 
-function start() {
-  let args = [path.join(__dirname, 'main.js'), ...process.argv.slice(2)]
-  CFonts.say([process.argv[0], ...args].join(' '), {
-    font: 'console',
-    align: 'center',
-    gradient: ['red', 'magenta']
-  })
-  let p = spawn(process.argv[0], args, {
-    stdio: ['inherit', 'inherit', 'inherit', 'ipc']
-  })
-  .on('message', data => {
-    if (data == 'reset') {
-      console.log('RESET')
-      p.kill()
-      start()
-      delete p
-    }
-  })
-}
 
-start()
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
